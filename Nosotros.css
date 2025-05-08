@@ -1,0 +1,99 @@
+/* Reset de márgenes y paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4fbfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #1a73e8;
+}
+
+/* Estilos del contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de la sección de información */
+.info {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.info p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.info br {
+  margin-bottom: 10px;
+}
+
+/* Estilo de la sección del mapa */
+.mapa {
+  text-align: center;
+}
+
+.mapa h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.mapa-contenedor iframe {
+  border-radius: 8px;
+}
+
+/* Estilo responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .info p {
+    font-size: 1rem;
+  }
+
+  .mapa h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .info p {
+    font-size: 0.95rem;
+  }
+}

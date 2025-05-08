@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva de Viaje</title>
+  <style>
+    /* Reset de márgenes y paddings para todos los elementos */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos generales */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #6be7a8; /* Color suave de fondo */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Estilo del formulario */
+    .form-container {
+      background-color: #ffffff;
+      padding: 35px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto hover en el formulario */
+    .form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Título del formulario */
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* Estilos de los campos de entrada */
+    input, button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      transition: 0.3s ease;
+    }
+
+    /* Estilos del input cuando se enfoca */
+    input:focus {
+      border-color: #6be7a8;
+      outline: none;
+      background-color: #fff;
+      box-shadow: 0 0 0 2px rgba(107, 231, 168, 0.2);
+    }
+
+    /* Estilo del botón */
+    button {
+      background-color: #1a73e8;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Cambio de color del botón al pasar el mouse */
+    button:hover {
+      background-color: #155cc1;
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 28px 25px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      input, button {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="form-container" action="https://formsubmit.co/risannicorrea22@gmail.com" method="POST" onsubmit="generarCodigo()">
+    <h2>Reserva tu viaje</h2>
+    
+    <input type="text" name="Nombre" id="nombre" placeholder="Tu nombre completo" required>
+    <input type="email" name="Correo" placeholder="Tu correo electrónico" required>
+    <input type="hidden" name="Código de viaje" id="codigo">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://tu-sitio.com/gracias.html">
+    
+    <button type="submit">Reservar 5 días - $1600 USD</button>
+  </form>
+
+  <script>
+    function generarCodigo() {
+      const codigo = Math.floor(Math.random() * 9000) + 1000; 
+      document.getElementById("codigo").value = "VIA-" + codigo; 
+    }
+  </script>
+
+</body>
+</html>
